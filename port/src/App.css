@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes rock {
+  0% {
+    transform: translateX(0px);
+  }
+  49% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+body {
+  background: #231e3c;
+  font-family: Manrope, sans-serif;
+  color: rgba(255, 255, 255, 1);
+}
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+
+.App {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.Header nav {
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.108);
+}
+
+.Header ul {
+  list-style-type: none;
+}
+.Header li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.stack_cont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.stack {
+  margin-left: auto !important;
+  text-transform: uppercase;
+  background: rgba(30, 41, 59, 0.4);
+  padding: 10px;
+  font-family: "Orbitron", sans-serif;
+  border-radius: 10px;
+  font-size: 10px;
+  margin-right: 9px;
+}
+.backBtn {
+  color: rgba(255, 255, 255, 0.405);
+  animation: rock 1.5s infinite;
+}
+
+.Home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.home__picAndAbout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Home Img {
+  height: 300px;
+  width: 300px;
+  border-radius: 150px;
+  margin: 0 20px;
+}
+
+.home__picAndAbout div {
+  margin: 0 20px;
+}
+.home__LinksAndContactMe {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.home__contactWrapper {
+  margin-top: auto;
+  text-align: right;
+}
+
+.home__contactMe {
+  padding: 10px 15px;
+  border: 1px solid white;
+  display: inline-block;
+  border-radius: 20px;
+  margin-bottom: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.home__contactMe:hover {
+  padding: 10px 20px;
+}
+
+.home__contactText {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.linkLines {
+  content: "";
+  height: 0.1px;
+  width: 20px;
+  background: rgba(255, 255, 255, 1);
+  border-color: white;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
+  transition: width 0.5s;
+}
+
+.bodyNavLink {
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  width: fit-content;
+  margin-top: 20px;
+}
+.bodyNavLink:hover .linkLines {
+  width: 50px;
+  right: -30px;
+  color: #1d1e20;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.bodyNavLink:hover .linkLinesText {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.linkLinesText {
+  font-family: Manrope, sans-serif;
+}
+
+.typewiter-effect {
+  display: flex;
+}
+
+.About {
+  padding-top: 30px;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.About > h1,
+.projects__header,
+.Links__header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.108);
+  font-family: Space Grotesk, sans-serif;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.About p {
+  font-family: Manrope, sans-serif;
+  color: rgba(255, 255, 255, 0.405);
+  margin: 20px 0;
+}
+
+.About ul {
+  margin-left: 20px;
+  color: rgba(255, 255, 255, 0.405);
+}
+.About li {
+  margin-bottom: 10px;
+}
+
+.Projects {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.projects__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* .projects__container h1 {
+  font-size: 25px;
+} */
+.Projects .contribution {
+  margin: 20px 0;
+  color: #a5a5a5;
+  font-size: small;
+}
+.projects__cardWrapper {
+  background-color: rgba(23, 23, 23, 0.4);
+  padding: 20px;
+  width: 380px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+}
+.projects__cardWrapper p {
+  color: #a5a5a5;
+  font-size: small;
+}
+.projects__cardWrapper img {
+  margin: 15px 0;
+  width: 100%;
+}
+.projects__active {
+  color: #22c55e;
+  background-color: #22c55e2a;
+  padding: 5px;
+  width: fit-content;
+  font-size: x-small;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.projects__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.projects__buttons a {
+  background-color: rgba(38, 38, 38, 0.973);
+  color: rgba(82, 82, 82, 1);
+
+  width: 48%;
+  padding: 10px;
+  text-align: center;
+}
+#project__website {
+  background-color: white;
+}
+
+.Links {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Links p {
+  color: #a5a5a5;
+  margin: 20px 0;
+}
+
+.Footer {
+  text-align: right;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.108);
+  padding: 30px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .Home Img {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Home Img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .About {
+    padding-top: 30px;
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .projects__container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .projects__container img {
+    width: 100%;
+  }
+
+  .projects__cardWrapper {
+    width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Home Img {
+    height: 180px;
+    width: 180px;
+  }
+  .home__picAndAbout {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .home__picAndAbout h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .home__picAndAbout h2 {
+    font-size: 18px;
+  }
+  .home__text {
+    margin: 0 auto !important;
+    text-align: center;
+  }
+  .home__text .typewiter-effect {
+    /* display: flex; */
+    justify-content: center;
+  }
+  .home__text h1 {
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .home__picAndAbout h2 {
+    font-size: 16px;
+  }
+}
